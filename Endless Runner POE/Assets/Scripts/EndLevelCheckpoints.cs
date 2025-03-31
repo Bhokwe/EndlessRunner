@@ -20,6 +20,10 @@ public class EndLevelCheckpoints : MonoBehaviour
         
     }
 
+    private void OnCollisionEnter(Collision collision)//
+    {
+        Debug.Log("Level {Level Counter} Complete!!");//Checkpoint Display
+    }
     /*private void OnEnterTrigger(Collider collider) //Player to interact with checkpoint to complete the level
     {
         Debug.Log("Level {Level Counter} Complete!!");//Checkpoint Display
