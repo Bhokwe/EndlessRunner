@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EndLevelCheckpoints : MonoBehaviour
 {
-    [SerializeField]
-    GameObject UI;
+    //[SerializeField]
+    //GameObject UI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        UI.SetActive(true);
+        //UI.SetActive(true);
+        //Might need if scene migrates player to new scene UI = GameObject.Find();
+
     }
 
     // Update is called once per frame
@@ -18,14 +20,14 @@ public class EndLevelCheckpoints : MonoBehaviour
         
     }
 
-    private void OnEnterTrigger(Collider collider) //Player to interact with checkpoint to complete the level
+    /*private void OnEnterTrigger(Collider collider) //Player to interact with checkpoint to complete the level
     {
         Debug.Log("Level {Level Counter} Complete!!");//Checkpoint Display
 
-    }
+    }*/
     //Checkpoint to behave as teleporter/NewLevelStart
-    private class CheckpointLevelTeleport(Collision collision)
+    /*private class CheckpointLevelTeleport(Collision collision)
     {
 
-    }
+    }*/
 }
