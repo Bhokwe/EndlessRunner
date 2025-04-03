@@ -68,8 +68,14 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         alive = false;
+        //if(alive = false)
+        //{
+        //    ShowRestartPrompt();
+        //}
 
         //yesRestart.onClick.AddListener(RestartGame()); //Trying to integrate onClick and put the panel before the actual restart
+
+
         Invoke("Restart", 2);
 
         //noRestart.onClick.AddListener(CancelRestart()); //trying to invoke no restart onClick
@@ -79,10 +85,12 @@ public class PlayerMovement : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    //public void ShowRestartPrompt() //from UI Manager script
+    //public void ShowRestartPrompt() //from UI Manager script...not working:(
     //{
     //    Time.timeScale = 0f; // Stops game time
     //    restartBackground.SetActive(true);
+
+
     //}
 
     //public void RestartGame()
