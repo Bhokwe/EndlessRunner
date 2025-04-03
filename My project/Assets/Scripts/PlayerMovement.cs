@@ -5,8 +5,8 @@ public class PlayerMovement : MonoBehaviour
 {
     //public float playerSpeed = 5;
     //public float horizontalSpeed = 4;
-    //public float leftLimit = -3;
-    //public float rightLimit = 3;
+    public float leftLimit = -3;
+    public float rightLimit = 3;
     public float speed = 5;
     public Rigidbody rb;
 
@@ -14,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalMultiplier = 2;
 
     public bool alive = true;
+
+    //restart variables
+    //public GameObject restartBackground;
+    //public Button yesRestart;
+    //public Button noRestart;
 
     private void FixedUpdate()
     {
@@ -64,10 +69,31 @@ public class PlayerMovement : MonoBehaviour
     {
         alive = false;
 
+        //yesRestart.onClick.AddListener(RestartGame()); //Trying to integrate onClick and put the panel before the actual restart
         Invoke("Restart", 2);
+
+        //noRestart.onClick.AddListener(CancelRestart()); //trying to invoke no restart onClick
     }
-    void Restart()
+    void Restart() //un-commented to get the game working
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    //public void ShowRestartPrompt() //from UI Manager script
+    //{
+    //    Time.timeScale = 0f; // Stops game time
+    //    restartBackground.SetActive(true);
+    //}
+
+    //public void RestartGame()
+    //{
+    //    Time.timeScale = 1f; // Resumes game time
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().name); //Gets and activates panel
+    //}
+
+    //public void CancelRestart()
+    //{
+    //    Time.timeScale = 1f; // Resumes game time
+    //    restartBackground.SetActive(false);
+    //}
 }
